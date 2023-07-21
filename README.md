@@ -9,7 +9,7 @@ Molly is a helpful script designed to clean up unused Svelte components in your 
 - Scans your project to find all .svelte files and checks if they are imported in any other files.
 - Identifies and lists unused Svelte components for easy reference.
 - Offers an option to move the unused components to the `_unused` directory in your project's root.
-- Provides a delightful selection of witty haikus about the joy of tidying up after moving the files.
+- Provides a delightful selection of witty haikus about tidying up your project files, which some say, sparks joy.
 
 ## How to Use
 

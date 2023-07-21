@@ -2,7 +2,7 @@
 
 ![Molly Waving](molly-tidies.jpg)
 
-Molly(or `lilmolly` on `npm`) is a `bash` script and **npm module** that helps you clean up unused Svelte components in your project, giving your codebase a breath of fresh air and enhancing its tidiness. (Yes, I know the Svelte compiler tree-shakes your code at build time so that unused components aren’t included in the bundle, but here we are talking about cognitive tidiness, less hunting for the right component, and, well, a better developer experience.) Molly identifies and, if you like, removes Svelte components that are not imported in your project. And if, after running Molly, you need to restore components you accidentally removed, just run Molly’s undo bash script, et voilà!—removed files are back where they were.
+Molly (or `lilmolly` on `npm`) is a `bash` script and **npm module** that helps you clean up unused Svelte components in your project, giving your codebase a breath of fresh air and enhancing its tidiness. (Yes, I know the Svelte compiler tree-shakes your code at build time so that unused components aren’t included in the bundle, but here we are talking about cognitive tidiness, less hunting for the right component, and, well, a better developer experience.) Molly identifies and, if you like, removes Svelte components that are not imported in your project. And if, after running Molly, you need to restore components you accidentally removed, just run Molly’s undo bash script, et voilà!—removed files are back where they were.
 
 ![Molly](molly-screenshot.jpg)
 

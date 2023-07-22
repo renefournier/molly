@@ -69,8 +69,8 @@ show_summary() {
 echo
 echo -e "${TEAL}Molly 🧹 is scanning the src folder to find all .svelte files.${NC}"
 echo
-echo -e "${GREEN}.${NC} means the .svelte file is imported in another file."
-echo -e "${RED}x${NC} means the .svelte file is not imported and can be removed."
+echo -e "${GREEN}•${NC} means the .svelte file is imported in another file."
+echo -e "${RED}×${NC} means the .svelte file is not imported and can be removed."
 echo
 
 
@@ -83,7 +83,7 @@ do
     # Skip files starting with '+'
     if [[ "$filename" == +* ]]
     then
-        echo -n -e "${GREEN}.${NC}"
+        echo -n -e "${GREEN}•${NC}"
         continue
     fi
 
@@ -93,10 +93,10 @@ do
     # If nothing was found, then the file is unused
     if [[ -z $found ]]
     then
-        echo -n -e "${RED}x${NC}"
+        echo -n -e "${RED}×${NC}"
         unused_files+=("$svelte_file")
     else
-        echo -n -e "${GREEN}.${NC}"
+        echo -n -e "${GREEN}•${NC}"
     fi
 done < <(find src -type f -name "*.svelte" -print0)
 

@@ -1,13 +1,14 @@
 {
-  "version": "1.0.8",
+  "version": "1.1.1",
   "name": "lilmolly",
-  "description": "Molly (or Little Molly, er, lilmolly on npm) is a bash script and npm module that helps you clean up unused Svelte components in your project, giving your codebase a breath of fresh air and enhancing its tidiness. (Yes, I know the Svelte compiler tree-shakes your code at build time so that unused components aren’t included in the bundle, but here we are talking about cognitive tidiness, less hunting for the right component, and, well, a better developer experience.) Molly identifies and, if you like, removes Svelte components that are not imported in your project. And if, after running Molly, you need to restore components you accidentally removed, just run Molly’s undo bash script, et voilà, removed files are back where they belong.",
+  "description": "A bash script and npm module to identify and remove unused Svelte components for a tidier codebase—includes a handy undo option, too!",
   "main": "lib/index.js",
   "bin": {
     "lilmolly": "lib/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    // add more scripts here...
   },
   "files": [
     "lib"
@@ -34,5 +35,9 @@
   "bugs": {
     "url": "https://github.com/renefournier/molly/issues"
   },
-  "homepage": "https://github.com/renefournier/molly#readme"
+  "homepage": "https://github.com/renefournier/molly#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "private": false
 }

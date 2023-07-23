@@ -7,7 +7,8 @@
 GREEN='\033[0;32m'
 RED='\033[0;31m'
 TEAL='\033[1;36m'
-PINK='\033[1;35m'
+YELLOW='\033[1;33m'
+
 NC='\033[0m' # No Color
 
 # Witty Haikus about the joy of tidying up
@@ -48,7 +49,7 @@ move_unused_files() {
     # Display a random witty haiku after moving the files
     echo
     random_haiku=${haikus[$((RANDOM % ${#haikus[@]}))]}
-    echo -e "${PINK}$random_haiku${NC}"
+    echo -e "${YELLOW}$random_haiku${NC}"
 }
 
 # Function to display summary of unused files

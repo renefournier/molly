@@ -1,6 +1,6 @@
 # Molly 🧹
 
-Molly tidies up unused Svelte components—which can spark joy 🌟
+Molly helps you tidy up unused Svelte components which, some say, sparks joy 🌟.
 
 ![Molly Waving](molly-tidies.jpg)
 

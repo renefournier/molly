@@ -7,8 +7,8 @@
     "lilmolly": "lib/index.js"
   },
   "scripts": {
+    "check:unused": "lilmolly",
     "test": "echo \"Error: no test specified\" && exit 1"
-    // add more scripts here...
   },
   "files": [
     "lib"

@@ -2,7 +2,11 @@
 
 ![Molly Waving](molly-tidies.jpg)
 
-Molly (or `lilmolly` on `npm`) is a `bash` script and **npm module** that helps you clean up unused Svelte components in your project, giving your codebase a breath of fresh air and enhancing its tidiness. (Yes, I know the Svelte compiler tree-shakes your code at build time so that unused components aren’t included in the bundle, but here we are talking about cognitive tidiness, less hunting for the right component, and, well, a better developer experience.) Molly identifies and, if you like, removes Svelte components that are not imported in your project. And if, after running Molly, you need to restore components you accidentally removed, just run Molly’s undo bash script, et voilà!—removed files are back where they were.
+Molly (or `lilmolly` on `npm`) is an **npm module** that helps you clean up unused Svelte components in your project, giving your codebase a breath of fresh air and enhancing its tidiness.
+
+> “Yes, I know the Svelte compiler tree-shakes your code at build time so that unused components aren’t included in the bundle, but here we are talking about cognitive tidiness, less hunting for the right component, and, well, a better developer experience.” — René
+
+Molly identifies and, if you like, removes Svelte components that are not imported in your project. And if, after running Molly, you need to restore components you accidentally removed, just run Molly’s undo bash script, et voilà!—removed files are back where they were.
 
 ![Molly](molly-screenshot.jpg)
 
@@ -11,7 +15,9 @@ Molly (or `lilmolly` on `npm`) is a `bash` script and **npm module** that helps 
 - [Molly 🧹](#molly-)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
+  - [Safety notice](#safety-notice)
   - [Quickstart](#quickstart)
+    - [Undoing Changes](#undoing-changes)
   - [Example Output](#example-output)
   - [Reporting Issues](#reporting-issues)
   - [Contributing](#contributing)
@@ -26,17 +32,50 @@ Molly (or `lilmolly` on `npm`) is a `bash` script and **npm module** that helps 
 - Creates an `_undo.txt.sh` bash script that, if you run it, moves the files in `_unused` back to their original location in `src`, then deletes itself. ♻️!
 - Provides a delightful selection of witty haikus about tidying up your project files, which some say, [spark joy](https://www.youtube.com/watch?v=9AvWs2X-bEA).
 
+## Safety notice
+
+> Molly does not _delete_ your project’s Svelte components, it only _moves_ unused ones (if you choose **Y** when prompted) to an `_unused` directory.
+
 ## Quickstart
 
 To get started with Molly and tidy up your Svelte project, follow these easy steps:
 
-1. **Install Molly**: Either
-   - `npm install --global lilmolly` **or**
-   - Download `lib/molly.sh` into your Svelte project app root (just above `src`) and make it executable with `chmod +x lilmolly.sh`
+1. **Install Molly** globally or as a dev dependency:
+
+   - ```bash
+       npm install --global lilmolly
+     ```
+   - ```bash
+       npm install --save-dev lilmolly
+     ```
+
+   There is also a bash script version that you can download (`lib/molly.sh`) into your Svelte project app root and make it executable with `chmod +x lilmolly.sh`.
 
 2. **Run Molly**: Navigate to the root of your Svelte or SvelteKit project and run Molly:
-   - `lilmolly` (Node JS version) **or**
-   - `./molly.sh` (Bash script)
+
+   - ```bash
+     lilmolly
+     ```
+
+3. Or run **Molly** with `npx`:
+
+   - ```bash
+     npx lilmolly
+     ```
+
+You could also add a script to your `package.json` to run Molly, e.g.
+
+```
+"scripts": {
+  "check:unused": "lilmolly"
+}
+```
+
+And then:
+
+```bash
+npm run check:unused
+```
 
 Molly will scan your project's `src` folder for .svelte files and display their usage status with dots and x’s:
 
@@ -50,6 +89,10 @@ Molly will scan your project's `src` folder for .svelte files and display their 
 3. **Enjoy a Haiku**: Once the cleanup is done, a delightful, random haiku about tidying up will be displayed. Take a moment to enjoy it and let the joy of tidiness spark in your project.
 
 Note: Before using Molly, ensure you have a backup of your code or your code is checked into a version control system. Molly moves files but a little precaution can go a long way.
+
+### Undoing Changes
+
+Each time you run Molly and opt to move unused components, an `_undo.txt.sh` script is generated to help you reverse the most recent changes. This script is overwritten every time Molly is run. Thus, if you run Molly multiple times, only the changes from the latest run can be undone using the script. If you wish to preserve the ability to undo from a particular run, you should make a backup of the `_undo.txt.sh` script before running Molly again.
 
 ## Example Output
 

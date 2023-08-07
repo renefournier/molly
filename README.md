@@ -1,5 +1,7 @@
 # Molly 🧹
 
+Molly tidies up unused Svelte components—which can spark joy 🌟
+
 ![Molly Waving](molly-tidies.jpg)
 
 Molly (or `lilmolly` on `npm`) is an **npm module** that helps you clean up unused Svelte components in your project, giving your codebase a breath of fresh air and enhancing its tidiness.

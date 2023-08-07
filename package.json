@@ -1,5 +1,5 @@
 {
-  "version": "1.1.1",
+  "version": "1.2.1",
   "name": "lilmolly",
   "description": "A bash script and npm module to identify and remove unused Svelte components for a tidier codebase—includes a handy undo option, too!",
   "main": "lib/index.js",

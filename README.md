@@ -8,7 +8,7 @@ Molly (or `lilmolly` on `npm`) is an **npm module** that helps you identify unus
 
 > “Yes, I know the Svelte compiler tree-shakes your code at build time so that unused components aren’t included in the bundle, but here we are talking about cognitive tidiness, less hunting for the right component, and, well, a better developer experience.” — René
 
-Molly gives beautiful Svelte codebase a breath of fresh air and enhances its tidiness.
+Molly gives your beautiful Svelte codebase a breath of fresh air and enhances its tidiness.
 
 ![Molly](molly-screenshot.jpg)
 

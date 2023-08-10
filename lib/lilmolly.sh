@@ -8,26 +8,25 @@ GREEN='\033[0;32m'
 RED='\033[0;31m'
 TEAL='\033[1;36m'
 YELLOW='\033[1;33m'
-
 NC='\033[0m' # No Color
 
 # Witty Haikus about the joy of tidying up
 declare -a haikus=(
-"With each file removed,
-The codebase breathes freely,
-Joy sparks in tidiness."
-"Unused files depart,
-Space clears for new creations,
-Tidy project’s heart."
-"A sweep of the broom,
-Code finds new clarity,
-Tidying brings bloom."
-"Messy code, no more,
-Tidying magic restores,
-Joy in each closed door."
-"Freed from unused weight,
-The project finds its rhythm,
-Tidying is great."
+"With each file removed 📂,
+The codebase breathes freely 💨,
+Joy sparks in tidiness ✨."
+"Unused files depart 🚀,
+Space clears for new creations 🎨,
+Tidy project’s heart ❤️."
+"A sweep of the broom 🧹,
+Code finds new clarity 🌈,
+Tidying brings bloom 🌸."
+"Messy code, no more 🚫,
+Tidying magic restores 🎩,
+Joy in each closed door 🚪."
+"Freed from unused weight 🏋️,
+The project finds its rhythm 🎵,
+Tidying is great 😊."
 )
 
 unused_files=()
@@ -35,21 +34,22 @@ unused_files=()
 # Function to move unused files to _unused directory
 move_unused_files() {
     mkdir -p _unused
-    echo "#!/bin/bash" > "_undo.txt.sh"
+    echo "#!/bin/bash" > "_undo.sh"
     for file in "${unused_files[@]}"
     do
         mv "$file" "_unused/"
         echo -e "${RED}Moved \"$file\" to \"_unused/\"${NC}"
-        printf "mv _unused/%q %q\n" "$(basename "$file")" "$file" >> _undo.txt.sh
-
+        printf "mv _unused/%q %q\n" "$(basename "$file")" "$file" >> _undo.sh
     done
-    echo 'rm -- "$0"' >> "_undo.txt.sh"
-    chmod 755 "_undo.txt.sh"
+    echo 'rm -- "$0"' >> "_undo.sh"
+    chmod 755 "_undo.sh"
 
     # Display a random witty haiku after moving the files
     echo
     random_haiku=${haikus[$((RANDOM % ${#haikus[@]}))]}
     echo -e "${YELLOW}$random_haiku${NC}"
+    echo
+    echo -e "To undo, run ${GREEN}./_undo.sh${NC} 🔄"
 }
 
 # Function to display summary of unused files
@@ -68,10 +68,9 @@ show_summary() {
 
 # Beginning of the script
 echo
-echo -e "${TEAL}Molly 🧹 is scanning the src folder to find all .svelte files.${NC}"
-echo
-echo -e "${GREEN}•${NC} means the .svelte file is imported in another file."
-echo -e "${RED}×${NC} means the .svelte file is not imported and can be removed."
+echo -e "${TEAL}Molly 🧹 is scanning the src folder recursively to find all .svelte files. 🔎${NC}"
+echo -e "${GREEN}•${NC} means the .svelte file is imported in another file. 💼"
+echo -e "${RED}×${NC} means the .svelte file is not imported and can be moved from src to _unused. 🗑️"
 echo
 
 
@@ -121,7 +120,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
     move_unused_files
     echo
-    echo -e "To undo, run ${GREEN}./_undo.txt.sh${NC}"
+    echo -e "To undo, run ${GREEN}./_undo.sh${NC}"
 else
     echo
     echo -e "${TEAL}Not moving files. Bye! 👋${NC}"

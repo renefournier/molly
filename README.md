@@ -26,7 +26,7 @@ Molly gives your beautiful Svelte codebase a breath of fresh air and improves it
       - [Windows 🪟](#windows-)
   - [Example output 📄](#example-output-)
   - [Reporting issues 🐛](#reporting-issues-)
-  - [Dedication 🍾](#dedication-)
+  - [_Chapeau_ to an Englishman in New York 🇬🇧🗽](#chapeau-to-an-englishman-in-new-york-)
   - [Contributing 🤝](#contributing-)
   - [License 📜](#license-)
 
@@ -144,6 +144,7 @@ Unused Svelte file: "src/lib/components/inputs/TestUnused 3.svelte" (1.00 KB)
 Total KB that will be saved if files are removed: 4.00 KB
 
 Do you want to move these 4 files from /src to /_unused ? (y/n) y
+
 Moved "src/lib/Test 🧹 Unused 4.svelte" to "_unused/"
 Moved "src/lib/components/inbox/TestUnused.svelte" to "_unused/"
 Moved "src/lib/components/inbox/TestUnused2.svelte" to "_unused/"
@@ -171,13 +172,13 @@ Molly aims to simplify and enhance your Svelte project tidying experience. If yo
 
 We appreciate your contributions to making Molly better. All issues, questions, and contributions are welcomed!
 
-## Dedication 🍾
+## _Chapeau_ to an Englishman in New York 🇬🇧🗽
 
-This project, and much of my joy in web development, is dedicated to [Rich Harris] (https://twitter.com/Rich_Harris), the creator of Svelte, and his [Team](https://github.com/sveltejs/svelte/graphs/contributors).
+This project extends heartfelt appreciation to [Rich Harris](https://twitter.com/Rich_Harris), the ingenious mind behind Svelte, along with his dedicated [Team](https://github.com/sveltejs/svelte/graphs/contributors).
 
-Discovering Svelte back in 2019 rekindled my love for web development in a way I did not expect. The tooling and configuration complexity at the time was burdensome to many. Svelte’s elegance—simple syntax, high-performance and intuitive architecture—struck a chord with me and [many others](https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/).
+My journey with Svelte began in 2019 when I sought a simpler, faster, *fun*ner way to craft ambitious full-stack web apps. Svelte emerged as a breath of fresh air, rekindling my love for web development in ways I did not expect. While other frameworks felt bogged down in complexity, Svelte was easy to learn and quick to develop with. Its simple syntax, high-performance, and intuitive architecture resonated with me and, apparently, [many others](https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/).
 
-Thank you! 🌟
+Thank you, **Rich & Company**! 🌟
 
 ## Contributing 🤝
 

@@ -63,7 +63,7 @@ You can install Molly globally or as a dev dependency:
      npm install --save-dev lilmolly
      ```
 
-   There is also a bash script version that you can download (`lib/molly.sh`) into your Svelte project app root and make it executable with `chmod +x lilmolly.sh`.
+   There is also a `bash` script version that you can download (`lib/molly.sh`) into your Svelte project app root and make it executable with `chmod +x lilmolly.sh`. Please keep in mind that the `bash` script more limited than the regular JavaScript version—no support for path aliases or `index.svelte` files.
 
 2. **Run Molly**: Navigate to the root of your Svelte or SvelteKit project and run Molly:
 

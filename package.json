@@ -1,5 +1,5 @@
 {
-  "version": "1.3.2",
+  "version": "1.3.4",
   "name": "lilmolly",
   "description": "Molly is a utility that helps you identify unused components in your Svelte project. It assists in safely cleaning them up by moving them (if you want) to an ”_unused” directory. With the ability to undo actions and paired with delightful tidying haikus, Molly ensures that tidying up your Svelte project not only sparks joy but is also risk-free.",
   "main": "lib/index.js",
